@@ -1,0 +1,16 @@
+%button-styles {
+  button {
+    color: #000;
+    border: none;
+    background-color: rgba(188, 138, 252, 1);
+    padding: 1.2rem 2.5rem;
+    border-radius: 7px;
+    font-size: 2.2rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: rgba(188, 138, 252, 0.8);
+  }
+}

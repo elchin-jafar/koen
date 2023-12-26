@@ -1,0 +1,155 @@
+@use "button";
+@import "media-queries";
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  background-color: #190422;
+  padding: 3.6rem 2rem 3.6rem 7rem;
+  @include tablet {
+    padding: 1.9rem 3.7rem 12rem;
+  }
+  @include mobile {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .left {
+    flex-basis: 50%;
+    @include mobile {
+      margin-bottom: 3.6rem;
+    }
+    .left-content {
+      max-width: 63rem;
+      h2 {
+        font-size: 8rem;
+        font-weight: 600;
+        @include tablet {
+          font-size: 4.8rem;
+        }
+        @include mobile {
+          font-size: 4.8rem;
+        }
+      }
+
+      p {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+
+      @extend %button-styles;
+    }
+  }
+
+  .right {
+    flex-basis: 50%;
+    img {
+      margin-bottom: 10rem;
+      float: right;
+      @include tablet {
+        max-width: 39.6rem;
+      }
+      @include mobile {
+        max-width: 33.6rem;
+      }
+    }
+  }
+  .container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    display: grid;
+    place-items: center;
+
+    section.statistics {
+      padding: 3rem 0;
+      background-color: rgba(255, 255, 255, 1);
+      display: flex;
+      justify-content: space-around;
+      width: calc(100% - 14rem);
+      border-radius: 1.6rem;
+      filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.15));
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% - 3rem);
+        transform: translateY(35%);
+      }
+
+      .statistic-parts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .numbers {
+        font-size: 4.8rem;
+        font-weight: 600;
+        color: rgba(31, 38, 46, 1);
+
+        .sign {
+          color: rgba(188, 138, 252, 1);
+        }
+      }
+
+      p {
+        color: rgba(31, 38, 46, 1);
+        font-size: 2rem;
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+  }
+}
+
+section.main {
+  padding: 19rem 7rem 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mobile {
+    flex-direction: column;
+    padding: 19rem 1.5rem 1.5rem;
+  }
+
+  .left {
+    flex-basis: 50%;
+    @include mobile {
+      margin-top: 15rem;
+    }
+    img {
+      @include tablet {
+        max-width: 36.6rem;
+      }
+      @include mobile {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .right {
+    flex-basis: 50%;
+    .right-content {
+      max-width: 61rem;
+      h2 {
+        font-size: 4.8rem;
+        font-weight: 600;
+        @include tablet {
+          font-size: 3.2rem;
+        }
+        @include mobile {
+          font-size: 3.2rem;
+        }
+      }
+
+      p {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      @extend %button-styles;
+    }
+  }
+}

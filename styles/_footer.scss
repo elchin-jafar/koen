@@ -1,0 +1,118 @@
+@use "button";
+@import "media-queries";
+
+footer.end {
+  padding: 7.2rem 7rem 5.8rem;
+  background-color: rgba(25, 4, 34, 1);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  @include mobile {
+    padding: 3.2rem 1.5rem 4.2rem;
+    flex-direction: column;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+      font-size: 6.4rem;
+      font-weight: 600;
+      @include mobile {
+        font-size: 4rem;
+      }
+      #o-in-logo {
+        color: #bc8afc;
+      }
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      ul {
+        padding: 0;
+        list-style-type: none;
+        font-size: 2rem;
+        font-weight: 400;
+        display: flex;
+        justify-content: space-around;
+        gap: 3.3rem;
+        margin-right: 7.5rem;
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+
+      .nav {
+        @include tablet {
+          flex-direction: column;
+        }
+        @include mobile {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  .right {
+    label {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    .input-btn {
+      border-radius: 6.4px;
+      overflow: hidden;
+      position: relative;
+      margin-top: 1rem;
+      margin-bottom: 7.3rem;
+      input {
+        min-width: 41.5rem;
+        padding: 2.3rem;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        outline: none;
+        @include tablet {
+          min-width: 80%;
+        }
+        @include mobile {
+          min-width: 80%;
+          padding: 1.7rem;
+        }
+      }
+
+      button {
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        background-color: rgba(188, 138, 252, 1);
+        height: 100%;
+        border: none;
+        font-size: 2.2rem;
+        font-weight: 500;
+        padding: 1.5rem 3.5rem;
+      }
+      @extend %button-styles;
+    }
+
+    .buttons {
+      float: right;
+      .btn {
+        cursor: pointer;
+        @include tablet {
+          width: 15rem;
+        }
+        @include mobile {
+          width: 15rem;
+        }
+      }
+
+      .google-btn {
+        margin-right: 2.3rem;
+      }
+    }
+  }
+}

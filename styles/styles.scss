@@ -1,0 +1,124 @@
+@use "main";
+@use "service";
+@use "benefits";
+@use "feedback";
+@use "footer";
+@use "button";
+@import "media-queries";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+
+%main-theme {
+  color: #fff;
+  background-color: #190422;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  @extend %main-theme;
+  nav {
+    position: relative;
+    padding: 0 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include tablet {
+      padding: 1.9rem 3.7rem;
+    }
+    @include mobile {
+      padding: 1.9rem 1.5rem;
+    }
+    .logo {
+      font-size: 6.4rem;
+      font-weight: 600;
+      @include mobile {
+        font-size: 4rem;
+      }
+      #o-in-logo {
+        color: #bc8afc;
+      }
+    }
+
+    .section-links {
+      display: flex;
+      align-items: center;
+      @include tablet {
+        display: none;
+      }
+
+      @include mobile {
+        display: none;
+      }
+      ul {
+        list-style-type: none;
+        font-size: 2rem;
+        font-weight: 400;
+        display: flex;
+        justify-content: space-around;
+        gap: 5.6rem;
+        margin-right: 7.5rem;
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+      @extend %button-styles;
+    }
+    .hamburger {
+      cursor: pointer;
+      display: none;
+      @include tablet {
+        display: block;
+      }
+      @include mobile {
+        display: block;
+      }
+    }
+
+    .responsive-navbar {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 5;
+      width: 30rem;
+      background-color: rgba(25, 4, 34, 1);
+      border-left: 1px solid rgba(117, 117, 117, 1);
+      border-bottom: 1px solid rgba(117, 117, 117, 1);
+      @include mobile {
+        width: 20rem;
+      }
+      p {
+        text-align: end;
+        font-size: 2rem;
+        border-bottom: 1px solid rgba(117, 117, 117, 1);
+      }
+      ul {
+        list-style-type: none;
+        font-size: 2rem;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 5.6rem;
+        margin-right: 7.5rem;
+        text-align: end;
+        width: 80%;
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

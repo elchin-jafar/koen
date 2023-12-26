@@ -1,0 +1,113 @@
+@import "media-queries";
+
+.service {
+  background: url("../assets/Rectangle\ 10.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .main-text {
+    padding: 7rem;
+    margin: 0;
+    font-size: 4.8rem;
+    font-weight: 600;
+    @include tablet {
+      font-size: 3.2rem;
+    }
+    @include mobile {
+      padding: 2rem 0 0;
+      font-size: 3.6rem;
+      margin: 0 1.5rem;
+    }
+  }
+
+  .services {
+    margin: 0 7rem 25rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 0;
+    @include mobile {
+      margin: 2.4rem 1.5rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .singleService {
+      max-width: 47.7rem;
+
+      .img {
+        width: 8rem;
+        aspect-ratio: 1;
+        background-color: rgba(25, 4, 34, 1);
+        border-radius: 50%;
+        filter: drop-shadow(0 2px 8px rgba(95, 33, 77, 0.2));
+        display: grid;
+        place-items: center;
+      }
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: rgba(31, 38, 46, 1);
+      }
+
+      p {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  footer {
+    padding: 5rem 8rem 15rem;
+    background-color: rgba(25, 4, 34, 1);
+    position: relative;
+    @include tablet {
+      padding: 5.6rem 4rem 3.3rem;
+    }
+    @include mobile {
+      padding: 2.4rem 1.5rem 43rem;
+    }
+
+    .footer-text {
+      font-size: 4.8rem;
+      font-weight: 600;
+      color: #fff;
+      @include tablet {
+        font-size: 3.2rem;
+      }
+      @include mobile {
+        font-size: 3.6rem;
+      }
+    }
+
+    .buttons {
+      @include mobile {
+        display: flex;
+      }
+
+      .btn {
+        cursor: pointer;
+        @include mobile {
+          max-width: 15rem;
+        }
+      }
+    }
+
+    .google-btn {
+      margin-right: 3.8rem;
+    }
+
+    .mobile-view {
+      position: absolute;
+      bottom: 0;
+      right: 5%;
+      @include tablet {
+        max-width: 27.3rem;
+      }
+      @include mobile {
+        max-width: 26.8rem;
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+  }
+}
